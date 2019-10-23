@@ -1009,4 +1009,11 @@ public class AssertionTest {
         Assert.assertGreaterThan("asfdf", "a", Collator.getInstance());        
 
     }
+    
+    @Test
+    public void assertGreaterThan() {
+        Assert.assertGreaterThan(12, 3);
+        Assert.assertGreaterThan(12.3, 3.4);
+        Assert.assertGreaterThan('z', 'a');
+    }
 }
