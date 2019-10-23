@@ -964,6 +964,7 @@ public class Assert {
         MatcherAssert.assertThat(reason, actual, matcher);
     }
 
+
     /**
      * Asserts that {@code runnable} throws an exception of type {@code expectedThrowable} when
      * executed. If it does, the exception object is returned. If it does not throw an exception, an
@@ -1030,5 +1031,10 @@ public class Assert {
 
     private static String buildPrefix(String message) {
         return message != null && message.length() != 0 ? message + ": " : "";
+
+    
+    public static <T> void assertGreaterThan(T o1, T o2, java.util.Comparator<T> comparator) {
+        assertTrue(comparator.compare(o1, o2)>0);           
+
     }
 }

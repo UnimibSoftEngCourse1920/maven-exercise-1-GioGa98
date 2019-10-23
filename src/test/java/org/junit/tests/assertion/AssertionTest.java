@@ -16,6 +16,8 @@ import static org.junit.Assert.fail;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.text.Collator;
+import java.util.Comparator;
 
 import org.junit.Assert;
 import org.junit.ComparisonFailure;
@@ -1001,5 +1003,10 @@ public class AssertionTest {
                 throw t;
             }
         };
+    
+    @Test
+    public void assertGreaterThanTest() {
+        Assert.assertGreaterThan("asfdf", "a", Collator.getInstance());        
+
     }
 }
